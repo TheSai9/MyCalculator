@@ -83,4 +83,3 @@ fun CalculatorButton(text: String, modifier: Modifier = Modifier, onClick: () ->
         Text(text = text, fontSize = 24.sp)
     }
 }
-
