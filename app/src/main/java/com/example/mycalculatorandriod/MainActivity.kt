@@ -1,4 +1,3 @@
-// In MainActivity.kt
 package com.example.mycalculatorandriod
 
 import android.os.Bundle
@@ -14,11 +13,17 @@ import com.example.mycalculatorandriod.ui.theme.MyCalculatorAndriodTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // makes theapp use the whole screen area
         enableEdgeToEdge()
+
+        // Sets up the main UI of the app
         setContent {
+            // Wrap everything in the app’s theme
             MyCalculatorAndriodTheme {
+                // Basic layout structure for the screen
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    // Use the CalculatorScreen composable here
+                    // The main calculator screen goes here
                     CalculatorScreen(
                         modifier = Modifier.padding(innerPadding)
                     )
@@ -27,3 +32,4 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+```
